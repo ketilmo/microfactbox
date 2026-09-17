@@ -1,4 +1,53 @@
-/*! MicroFactBox v1.0.0 | (c) 2021 Alexander Prestmo | MIT License | git+https://github.com/aprestmo/microfactbox.git */
+/*! MicroFactBox v1.0.0 | (c) 2026 Alexander Prestmo | MIT License | git+https://github.com/aprestmo/microfactbox.git */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/public-sans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/public-sans-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/public-sans-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/bitter-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/bitter-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/big-shoulders-200.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/big-shoulders-900.woff2") format("woff2");
+}
 :root {
   --flow-space: 1.5em;
   --font-size: 1em;
@@ -14,7 +63,7 @@
 }
 
 ::selection {
-  background-color: rgba(0, 139, 209, 0.2);
+  background-color: hsla(200, 100%, 41%, 0.2);
 }
 
 *,
@@ -46,8 +95,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   accent-color: currentColor;
-  color: #262626;
-  font-family: "Guardian TextSans Web", sans-serif;
+  color: hsl(0, 0%, 15%);
+  font-family: "Public Sans", sans-serif;
   text-rendering: optimizeSpeed;
 }
 
@@ -58,13 +107,13 @@ picture {
 }
 
 mark {
-  background-color: rgba(255, 217, 0, 0.1);
-  border-block-end: 1px solid #dedede;
+  background-color: hsla(51, 100%, 50%, 0.1);
+  border-block-end: 1px solid hsl(0, 0%, 87%);
   cursor: help;
 }
 
 p {
-  font-family: "Guardian Egyptian", serif;
+  font-family: "Bitter", serif;
 }
 
 ul {
@@ -119,7 +168,7 @@ ul {
 }
 
 .site-header {
-  border-block-end: 1px solid #dedede;
+  border-block-end: 1px solid hsl(240, 0%, 87%);
   display: flex;
   place-content: center;
 }
@@ -153,7 +202,7 @@ ul {
   text-transform: uppercase;
 }
 .story__label::after {
-  color: #8992a4;
+  color: hsl(220, 13%, 59%);
   content: "|";
   margin-inline-start: var(--meta-spacing);
 }
@@ -180,11 +229,11 @@ ul {
   aspect-ratio: 16/9;
 }
 .story__image-caption {
-  color: #828282;
+  color: hsl(0, 0%, 51%);
   font-size: 0.75em;
 }
 .story__title {
-  font-family: "Guardian Sans Condensed";
+  font-family: "Big Shoulders", sans-serif;
   font-size: clamp(1.5em, 8vw, 3.125em);
   font-weight: 200;
   line-height: 1.15;
@@ -197,8 +246,8 @@ ul {
   margin-block-start: 0.2em;
 }
 .story__lead {
-  color: #828282;
-  font-family: "Guardian Egyptian", serif;
+  color: hsl(0, 0%, 51%);
+  font-family: "Bitter", serif;
   font-size: clamp(1em, 4.5vw, 1.25em);
   font-weight: 300;
   margin-block-start: 1.5em;
@@ -209,7 +258,7 @@ ul {
 .story__authors {
   --label-height: 2rem;
   block-size: var(--label-height);
-  border: 1px solid #d3e0e9;
+  border: 1px solid hsl(205, 33%, 87%);
   border-radius: calc(var(--label-height) / 2);
   display: inline-flex;
   font-size: 0.875em;
@@ -237,7 +286,7 @@ ul {
   margin-block-end: clamp(2em, 5vw, 4em);
 }
 .story__footer {
-  border-block-start: 1px solid #dedede;
+  border-block-start: 1px solid hsl(0, 0%, 87%);
   margin-block-start: 4em;
   padding-block: 1em;
 }
@@ -262,7 +311,7 @@ ul {
 }
 
 .mfb {
-  border-block-end: 1px solid #dedede;
+  border-block-end: 1px solid hsl(0, 0%, 87%);
   font-size: 0.875em;
   padding-block-end: 1em;
 }
@@ -276,26 +325,26 @@ ul {
 }
 .mfb__explanation a {
   --thickness: 0.0625rem;
-  color: #18384e;
-  text-decoration: solid underline #313335 var(--thickness);
+  color: hsl(205, 53%, 20%);
+  text-decoration: solid underline hsl(205, 3%, 20%) var(--thickness);
   text-underline-offset: 0.1em;
   transition: text-decoration 100ms ease-in;
   white-space: nowrap;
   will-change: text-decoration;
 }
 .mfb__explanation a:focus {
-  outline: 0.0625rem dotted #18384e;
+  outline: 0.0625rem dotted hsl(205, 53%, 20%);
   outline-offset: 0.125rem;
 }
 .mfb__explanation a:focus-visible {
-  background-color: rgba(255, 217, 0, 0.1);
+  background-color: hsla(51, 100%, 50%, 0.1);
 }
 .mfb__explanation a:hover {
   --thickness: 0.125rem;
 }
 
 .assistance {
-  background-color: rgba(255, 217, 0, 0.1);
+  background-color: hsla(51, 100%, 50%, 0.1);
   border-radius: 0.25rem;
   padding-block: 0.5em;
   padding-inline: 1em;
@@ -322,8 +371,8 @@ ul {
   pointer-events: none;
 }
 .show-some mark[data-assistance=some] {
-  background-color: rgba(255, 217, 0, 0.1);
-  border-block-end: 1px solid #dedede;
+  background-color: hsla(51, 100%, 50%, 0.1);
+  border-block-end: 1px solid hsl(0, 0%, 87%);
   cursor: help;
   pointer-events: all;
 }

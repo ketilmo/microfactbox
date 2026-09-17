@@ -2,10 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
   assistanceLevel();
 
   function assistanceLevel() {
-    if (document.querySelector('#none').checked) {
+    const noneInput = document.querySelector('#none');
+    const someInput = document.querySelector('#some');
+
+    if (!noneInput || !someInput) return;
+
+    if (noneInput.checked) {
       document.body.setAttribute('class', '');
       document.body.classList.add('show-none');      
-    } else if (document.querySelector('#some').checked) {
+    } else if (someInput.checked) {
       document.body.setAttribute('class', '');
       document.body.classList.add('show-some');
     } else {

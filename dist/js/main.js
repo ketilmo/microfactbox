@@ -1,4 +1,4 @@
-/*! MicroFactBox v1.0.0 | (c) 2021 Alexander Prestmo | MIT License | git+https://github.com/aprestmo/microfactbox.git */
+/*! MicroFactBox v1.0.0 | (c) 2026 Alexander Prestmo | MIT License | git+https://github.com/aprestmo/microfactbox.git */
 (function () {
   'use strict';
 
@@ -6,10 +6,15 @@
     assistanceLevel();
 
     function assistanceLevel() {
-      if (document.querySelector('#none').checked) {
+      const noneInput = document.querySelector('#none');
+      const someInput = document.querySelector('#some');
+
+      if (!noneInput || !someInput) return;
+
+      if (noneInput.checked) {
         document.body.setAttribute('class', '');
         document.body.classList.add('show-none');      
-      } else if (document.querySelector('#some').checked) {
+      } else if (someInput.checked) {
         document.body.setAttribute('class', '');
         document.body.classList.add('show-some');
       } else {

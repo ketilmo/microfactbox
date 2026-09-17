@@ -1,6 +1,6 @@
 // Plugins
-import { terser } from 'rollup-plugin-terser';
-import pkg from './package.json';
+import terser from '@rollup/plugin-terser';
+import pkg from './package.json' with { type: 'json' };
 
 
 // Configs

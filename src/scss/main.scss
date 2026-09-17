@@ -1,3 +1,59 @@
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/public-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/public-sans-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/public-sans-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/bitter-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/bitter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/big-shoulders-200.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/big-shoulders-900.woff2") format("woff2");
+}
+
 :root {
   --flow-space: 1.5em;
   --font-size: 1em;
@@ -45,7 +101,7 @@ body {
   -webkit-font-smoothing: antialiased;
   accent-color: currentColor;
   color: hsl(0, 0%, 15%);
-  font-family: "Guardian TextSans Web", sans-serif;
+  font-family: "Public Sans", sans-serif;
   text-rendering: optimizeSpeed;
 }
 
@@ -62,7 +118,7 @@ mark {
 }
 
 p {
-  font-family: "Guardian Egyptian", serif;
+  font-family: "Bitter", serif;
 }
 
 ul {
@@ -206,7 +262,7 @@ ul {
   }
 
   &__title {
-    font-family: "Guardian Sans Condensed";
+    font-family: "Big Shoulders", sans-serif;
     font-size: clamp(1.5em, 8vw, 3.125em);
     font-weight: 200;
     line-height: 1.15;
@@ -222,7 +278,7 @@ ul {
 
   &__lead {
     color: hsl(0, 0%, 51%);
-    font-family: "Guardian Egyptian", serif;
+    font-family: "Bitter", serif;
     font-size: clamp(1em, 4.5vw, 1.25em);
     font-weight: 300;
     margin-block-start: 1.5em;
